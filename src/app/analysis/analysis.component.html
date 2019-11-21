@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="page">
+        
+    </div>
+    <div class="page">
+        <table>
+            <tbody>
+                <tr *ngFor="let noid of this.cannabinoids"  matTooltip="{{ noid.name | titlecase }} &mdash; {{ this.params[noid.abbreviation] | percent:'2.2' }}">
+                    <td>{{ noid.abbreviation | uppercase }}</td>
+                    <td>{{ this.params[noid.abbreviation] | percent:'2.2' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        <table>
+            <tbody>
+                <tr *ngFor="let terp of this.terpenes"  matTooltip="{{ terp.name | titlecase }} &mdash; {{ this.params[terp.abbreviation] | percent:'2.2' }}">
+                    <td>{{ terp.name | titlecase }}</td>
+                    <td>{{ this.params[terp.abbreviation] | percent:'2.2' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

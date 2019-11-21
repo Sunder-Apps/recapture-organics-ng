@@ -2,8 +2,10 @@
 
 // GLOBAL THEME - Doesn't change on theme swap
 :root {
-    --brah-blue: #091430;
-    --brah-blue-light: #295ad6;
+    --green-1: #059033;
+    --green-2: #93CB56;
+    --green-3: #7BAA47;
+    --green-4: #355A20;
 
     --facebook-1: #3b5998;
     --youtube-1: #F00;
@@ -25,7 +27,7 @@
     --instagram-7: #e95950;
 }
 
-// THEME 0 - DEVICE_PREFERENCE: Dark Mode
+// THEME 0 - DEVICE_PREFERENCE: Light Mode
 :root {
     --fore: #222;
     --back: #fff;
@@ -51,54 +53,6 @@
     --info: steelblue;
     --info-focus: steelblue;
     --info-active: steelblue;
-}
-/*
-// THEME 0 - DEVICE_PREFERENCE: Light Mode
-@media (prefers-color-scheme: light) {
-    :root {
-        --fore: #222;
-        --back: #ddd;
-        --accept: #2b506e;
-        --reject: #2e2759;
-        --info: steelblue;
-        --danger: #b30000;
-    }
-}*/
-
-#theme {
-    // THEME 1 - DARK
-    &.dark {
-        --fore: #ddd;
-        --back: #222;
-        --action: #4682b4;
-        --action-focus: #4682b4;
-        --action-active: #4682b4;
-        --accept: #208a20;
-        --accept-focus: #208a20;
-        --accept-active: #208a20;
-        --reject: darkslateblue;
-        --reject-focus: darkslateblue;
-        --reject-active: darkslateblue;
-        --danger: #ff4d4d;
-        --danger-focus: #ff4d4d;
-        --danger-active: #ff4d4d;
-        --warning: #ffaa22;
-        --warning-focus: #ffaa22;
-        --warning-active: #ffaa22;
-        --info: steelblue;
-        --info-focus: steelblue;
-        --info-active: steelblue;
-    }
-
-    // THEME 2 - LIGHT
-    &.light {
-        --fore: #222;
-        --back: #ddd;
-        --accept: #2b506e;
-        --reject: #2e2759;
-        --info: steelblue;
-        --danger: #b30000;
-    }
 }
 
 // Theme Classes
