@@ -14,7 +14,16 @@ export class AlertsService {
   listId:string = 'brah-alerts-0'
   list:Alert[] = [
     {
-      alertId: 'brah-alerts-cookies-0',
+      alertId: 'alerts-dev-0',
+      alertClass: 'info',
+      disabled: false,
+      answer: Answer.NONE,
+      title: 'This app is in development.',
+      message: 'Send bug reports to sam@sunderapps.com',
+      acceptText: 'Okay'
+    },
+    {
+      alertId: 'alerts-cookies-0',
       alertClass: 'info',
       disabled: false,
       answer: Answer.NONE,
@@ -23,7 +32,7 @@ export class AlertsService {
       acceptText: 'Okay',
       infoText: 'Learn More',
       info: () => { alert('C is for 🍪; That\'s good enough for me.'); }
-    },
+    }/*,
     {
       alertId: 'brah-alerts-ads-0',
       alertClass: 'info',
@@ -45,7 +54,7 @@ export class AlertsService {
       acceptText: 'Okay',
       rejectText: 'Disable Mining',
       reject: () => { this.settingsService.set('crypto', false) }
-    }
+    }*/
   ];
 
   constructor(private storageService:StorageService,

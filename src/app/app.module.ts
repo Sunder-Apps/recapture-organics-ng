@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { GoogleChartsModule } from 'angular-google-charts'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -15,10 +16,13 @@ import { SettingsService } from './settings/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
-import { MatDialogModule, MatTooltipModule } from '@angular/material'
+import { MatDialogModule, MatTooltipModule, MatButtonModule } from '@angular/material'
 import { BarsComponent } from './bars/bars.component'
 import { LeftComponent } from './bars/left/left.component'
-import { AnalysisComponent } from './analysis/analysis.component'
+import { AnalysisComponent } from './analysis/analysis.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +36,10 @@ import { AnalysisComponent } from './analysis/analysis.component'
     FooterComponent,
     BarsComponent,
     LeftComponent,
-    AnalysisComponent
+    AnalysisComponent,
+    ProductsComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -41,12 +48,19 @@ import { AnalysisComponent } from './analysis/analysis.component'
     FormsModule,
     MatDialogModule,
     MatTooltipModule,
+    MatButtonModule,
+    GoogleChartsModule.forRoot()
   ],
   providers: [
     CryptoService,
     SettingsService,
     StorageService
   ],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    DefaultDialogComponent
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

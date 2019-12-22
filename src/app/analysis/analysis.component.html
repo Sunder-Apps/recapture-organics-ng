@@ -1,8 +1,14 @@
+<img class="bg" src="https://i.imgur.com/XJ5FDck.jpg" />
 <div class="container">
     <div class="page">
-        
-    </div>
-    <div class="page">
+        <google-chart
+            [title]=""
+            [type]="'PieChart'"
+            [data]="this.noidData"
+            [columnNames]="this.noidNames"
+            [roles]="this.roles"
+            [options]="this.noidOptions"
+        ></google-chart>
         <table>
             <tbody>
                 <tr *ngFor="let noid of this.cannabinoids"  matTooltip="{{ noid.name | titlecase }} &mdash; {{ this.params[noid.abbreviation] | percent:'2.2' }}">
@@ -13,6 +19,14 @@
         </table>
     </div>
     <div class="page">
+        <google-chart
+            [title]=""
+            [type]="'PieChart'"
+            [data]="this.terpData"
+            [columnNames]="this.terpNames"
+            [roles]="this.roles"
+            [options]="this.terpOptions"
+        ></google-chart>
         <table>
             <tbody>
                 <tr *ngFor="let terp of this.terpenes"  matTooltip="{{ terp.name | titlecase }} &mdash; {{ this.params[terp.abbreviation] | percent:'2.2' }}">

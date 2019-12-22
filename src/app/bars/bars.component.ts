@@ -15,7 +15,6 @@ export class BarsComponent implements OnInit {
     this.barsService.isOpen.subscribe(bars => {
       let open = false
       bars.forEach(val => {
-        console.log(val)
         if (val) {
           open = true
         }

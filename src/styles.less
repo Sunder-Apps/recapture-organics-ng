@@ -121,7 +121,7 @@ a {
     max-width: unset;
     padding: 20px;
     padding-bottom: 50px;
-    padding-left: 90px;
+    padding-left: 80px;
     overflow-x: hidden;
     min-height: 100vh;
 
@@ -160,11 +160,16 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     min-height: ~"calc(100vh - 70px)";
     margin-top: ~"calc(100vh - 70px)";
 
     &:first-of-type {
         margin-top: 0;
+    }
+
+    &.v {
+        flex-direction: column;
     }
 }
 

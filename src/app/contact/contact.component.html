@@ -1,0 +1,16 @@
+<img class="bg" src="https://i.imgur.com/VZffJea.jpg" />
+<div class="container">
+    <h1>Contact Us</h1>
+    <div class="page">
+        <div id="map"></div>
+        <div class="contact">
+            <div class="entry" *ngFor="let info of this.contactInfo">
+                <i [class]="info.icon"></i>
+                <div class="text">
+                    <h2>{{ info.name }}</h2>
+                    <p>{{ info.value }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
