@@ -1,14 +1,27 @@
 <img class="bg" src="https://i.imgur.com/VZffJea.jpg" />
 <div class="container">
-    <h1>Contact Us</h1>
-    <div class="page">
-        <div id="map"></div>
+    <div class="page v">
+        <h1>Contact Us</h1>
         <div class="contact">
-            <div class="entry" *ngFor="let info of this.contactInfo">
+            <!--div class="entry" *ngFor="let info of this.contactInfo">
                 <i [class]="info.icon"></i>
                 <div class="text">
                     <h2>{{ info.name }}</h2>
                     <p>{{ info.value }}</p>
+                </div>
+            </div-->
+            <div class="entry">
+                <i class="fas fa-phone"></i>
+                <div class="text">
+                    <h2>PHONE</h2>
+                    <a href="tel:530-320-5555"><p>(530)-320-5555</p></a>
+                </div>
+            </div>
+            <div class="entry">
+                <i class="fas fa-envelope-open-text"></i>
+                <div class="text">
+                    <h2>EMAIL</h2>
+                    <a href="mailto:recaptureorganics@gmail.com"><p>recaptureorganics@gmail.com</p></a>
                 </div>
             </div>
         </div>

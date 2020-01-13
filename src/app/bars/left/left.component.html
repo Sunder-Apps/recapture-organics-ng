@@ -5,17 +5,22 @@
     <div class="wrap">
         <div class="links">
             <ul>
-                <!--li>
-                    <a>
-                        <i class="fas fa-cash-register"></i>Shop
-                    </a>
-                </li-->
                 <li>
-                    <a routerLink="/analysis/" [queryParams]="this.randomAnalysis()" routerLinkActive="active">
-                        <i class="fas fa-cannabis"></i>Random Analysis
+                    <a routerLink="/" routerLinkActive="active">
+                        <i class="fas fa-home"></i>Home
                     </a>
                 </li>
-                <!--li>
+                <li>
+                    <a href="https://brahctopus-ink-llc.square.site/s/shop" routerLinkActive="active">
+                        <i class="fas fa-cash-register"></i>Shop
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/products/" routerLinkActive="active">
+                        <i class="fas fa-flask"></i>Products
+                    </a>
+                </li>
+                <li>
                     <a routerLink="/about/" routerLinkActive="active">
                         <i class="fas fa-id-card-alt"></i>About Us
                     </a>
@@ -26,10 +31,16 @@
                     </a>
                 </li>
                 <li>
-                    <a routerLink="/subscribe/" routerLinkActive="active">
-                        <i class="fas fa-envelope"></i>Subscribe
+                    <a routerLink="/analysis/" [queryParams]="this.randomAnalysis()" routerLinkActive="active">
+                        <i class="fas fa-cannabis"></i>Random Analysis (TEST)
                     </a>
-                </li-->
+                </li>
+                <li>
+                    <a routerLink="/settings/" routerLinkActive="active">
+                        <i class="fas fa-cog"></i>Settings
+                    </a>
+                </li>
+
             </ul>    
         </div>
     </div>

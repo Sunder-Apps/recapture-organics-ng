@@ -16,13 +16,14 @@ import { SettingsService } from './settings/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
-import { MatDialogModule, MatTooltipModule, MatButtonModule } from '@angular/material'
+import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material'
 import { BarsComponent } from './bars/bars.component'
 import { LeftComponent } from './bars/left/left.component'
 import { AnalysisComponent } from './analysis/analysis.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
+import { SubscribeComponent } from './subscribe/subscribe.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AboutComponent } from './about/about.component'
     AnalysisComponent,
     ProductsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,10 @@ import { AboutComponent } from './about/about.component'
     MatDialogModule,
     MatTooltipModule,
     MatButtonModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
     GoogleChartsModule.forRoot()
   ],
   providers: [
