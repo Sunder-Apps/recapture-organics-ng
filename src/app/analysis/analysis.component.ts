@@ -19,103 +19,103 @@ export class AnalysisComponent implements OnInit {
     {
       name: 'tetrahydrocannabinol',
       abbreviation: 'thc',
-      color: '#8fbb5d',
+      color: '#85A943',
       link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/THC.svg/220px-THC.svg.png',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/THC.svg/220px-THC.svg.png'
     },
     {
       name: 'tetrahydrocannabinolic acid',
       abbreviation: 'thca',
-      color: '#7BAA47',
+      color: '#85A943',
       link: 'https://en.wikipedia.org/wiki/Tetrahydrocannabinolic_acid',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tetrahydrocannabinolicacid.svg/220px-Tetrahydrocannabinolicacid.svg.png'
     },
     {
       name: 'tetrahydrocannabivarin',
       abbreviation: 'thcv',
-      color: '#69903c',
+      color: '#8B8D6B',
       link: 'https://en.wikipedia.org/wiki/Tetrahydrocannabivarin',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Thcv.svg/220px-Thcv.svg.png'
     },
     {
       name: 'cannabidiol',
       abbreviation: 'cbd',
-      color: '#3385ff',
+      color: '#92A6BB',
       link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cannabidiol.svg/225px-Cannabidiol.svg.png',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cannabidiol.svg/225px-Cannabidiol.svg.png'
     },
     {
       name: 'cannabidiolic acid',
       abbreviation: 'cbda',
-      color: '#0066ff'
+      color: '#7E97B0'
     },
     {
       name: 'cannabidivarin',
       abbreviation: 'cbdv',
-      color: '#0052cc',
+      color: '#486789',
       link: 'https://en.wikipedia.org/wiki/Cannabidivarin',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cannabidivarin.svg/220px-Cannabidivarin.svg.png'
     },
     {
       name: 'cannabigerol',
       abbreviation: 'cbg',
-      color: '#b366ff',
+      color: '#B1A7B8',
       link: 'https://en.wikipedia.org/wiki/Cannabigerol',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Cannabigerol-skeletal.svg/220px-Cannabigerol-skeletal.svg.png'
     },
     {
       name: 'cannabigerovarin',
       abbreviation: 'cbgv',
-      color: '#9933ff'
+      color: '#8C7F98'
     },
     {
       name: 'cannabigerol monomethyl ether',
       abbreviation: 'cbgm',
-      color: '#8000ff'
+      color: '#716183'
     },
     {
       name: 'cannabichromene',
       abbreviation: 'cbc',
-      color: '#ff6600',
+      color: '#DAA1A2',
       link: 'https://en.wikipedia.org/wiki/Cannabichromene',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/%28RS%29-Cannabichromene.svg/220px-%28RS%29-Cannabichromene.svg.png'
     },
     {
       name: 'cannabichromevarin',
       abbreviation: 'cbcv',
-      color: '#cc5200',
+      color: '#DAA1A2',
       link: 'https://en.wikipedia.org/wiki/Cannabichromevarin'
     },
     {
       name: 'cannabielsoin',
       abbreviation: 'cbe',
-      color: '#ffe066'
+      color: '#F0E5A8'
     },
     {
       name: 'cannabicyclol',
       abbreviation: 'cbl',
-      color: '#ffd633',
+      color: '#e9d97c',
       link: 'https://en.wikipedia.org/wiki/Cannabicyclol',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cannabicyclol.svg/220px-Cannabicyclol.svg.png'
     },
     {
       name: 'cannabinol',
       abbreviation: 'cbn',
-      color: '#ffcc00',
+      color: '#e1cc51',
       link: 'https://en.wikipedia.org/wiki/Cannabinol',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cannabinol.svg/220px-Cannabinol.svg.png'
     },
     {
       name: 'cannabivarin',
       abbreviation: 'cbv',
-      color: '#cca300',
+      color: '#EBB476',
       link: 'https://en.wikipedia.org/wiki/Cannabivarin',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cannabivarin.svg/250px-Cannabivarin.svg.png'
     }, 
     {
       name: 'cannabicitran',
       abbreviation: 'cbt',
-      color: '#997a00'
+      color: '#E29F55'
     }
   ]
   terpenes:any[] = [
@@ -170,15 +170,16 @@ export class AnalysisComponent implements OnInit {
     {
       name: 'ocimene',
       abbreviation: 'on',
-      color: '',
-      comparison: '',
+      color: '#9fdc78',
+      comparison: 'mint',
       link: 'https://en.wikipedia.org/wiki/Ocimene',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Alpha-ocimene.svg/220px-Alpha-ocimene.svg.png'
     },
     {
       name: 'linalool',
       abbreviation: 'ln',
-      color: '',
+      color: '#7b4c92',
+      comparison: 'lavender',
       link: 'https://en.wikipedia.org/wiki/Linalool',
       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Linalool_skeletal.svg/240px-Linalool_skeletal.svg.png'
     }
@@ -217,7 +218,8 @@ export class AnalysisComponent implements OnInit {
     },
     is3D: false,
     tooltip: {
-      isHtml: true
+      isHtml: true,
+      trigger: 'selection'
     }
   }
 
@@ -237,7 +239,8 @@ export class AnalysisComponent implements OnInit {
     },
     is3D: false,
     tooltip: {
-      isHtml: true
+      isHtml: true,
+      trigger: 'selection'
     }
   }
 
@@ -251,20 +254,31 @@ export class AnalysisComponent implements OnInit {
           data = Object.entries(this.params)
       this.cannabinoids.forEach(noid => {
         let tooltip = `
-        <div class="tooltip">
-          <img src="${noid.image}" />
-          <div style="border-bottom: 2px solid ${noid.color}">
-            <h4>${noid.abbreviation}</h4>
+        <div style="background-color:var(--back);text-align:center;min-width:300px;width:100%;height:100%;padding:20px;border:solid 1px ${noid.color}">
+          <img src="${noid.image}" alt="" style="width:auto;margin:10px auto;max-height:100px;" />
+          <div style="margin:10px 0;display:flex;justify-content:space-evenly;border-bottom: 2px solid ${noid.color}">
+            <h4 style="font-size:1.5em;margin:auto;text-transform:uppercase;">${noid.abbreviation} - ${(parseFloat(this.params[noid.abbreviation]) * 100).toFixed(3)}%</h4>
             <a href="${noid.link}">
-              <i class="fab fa-wikipedia-w"></i>
+              <i class="fab fa-wikipedia-w" style="font-size:4em;"></i>
             </a>
           </div>
-          <h5>${noid.name}</h5>
+          <h5 style="font-size:3em;margin:auto;">${noid.name}</h5>
         </div>`
         this.noidData.push([noid.abbreviation, parseFloat(params[noid.abbreviation]), tooltip])
       })
       this.terpenes.forEach(terp => {
-        let tooltip = '<img src="' + terp.image + '" />'
+        let tooltip = `
+        <div style="background-color:var(--back);text-align:center;min-width:300px;width:100%;height:100%;padding:20px;border:solid 1px ${terp.color}">
+          <img src="${terp.image}" alt="" style="width:auto;margin:10px auto;max-height:100px;" />
+          <div style="margin:10px 0;display:flex;justify-content:space-evenly;border-bottom: 2px solid ${terp.color}">
+            <h4 style="font-size:1.5em;margin:auto;text-transform:uppercase;">${terp.abbreviation} - ${(parseFloat(this.params[terp.abbreviation]) * 100).toFixed(3)}%</h4>
+            <a href="${terp.link}">
+              <i class="fab fa-wikipedia-w" style="font-size:4em;"></i>
+            </a>
+          </div>
+          <h5 style="font-size:3em;margin:auto;">${terp.name}</h5>
+          <h6>(found in ${terp.comparison})</h6>
+        </div>`
         this.terpData.push([terp.abbreviation, parseFloat(params[terp.abbreviation]), tooltip])
       })
       //this.noidData.push(["other", this.noidData.reduce((previousValue, currentValue) => previousValue - <number>currentValue[1] , 1)])

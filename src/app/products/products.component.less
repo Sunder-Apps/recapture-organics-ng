@@ -1,7 +1,9 @@
 // out: false
 h2 {
-    margin: 0;
+    margin: 0 0 10px 0;
     text-align: left;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--fore);
 }
 
 p {
@@ -10,11 +12,18 @@ p {
 }
 
 i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
     font-size: 50px;
 }
 
 img {
     width: 100%;
+    transform: scale(1.4);
+    transform-origin: 50% 80%;
+    z-index: 0;
 }
 
 .product {
@@ -22,14 +31,17 @@ img {
     flex-direction: column;
     justify-content: space-between;
     width: 400px;
-    min-height: 400px;
-    background-color: var(--back);
-    padding: 10px;
+    min-height: 550px;
+    background-color: var(--black);
     margin: 20px;
+    overflow: hidden;
 }
 
 .info {
     display: flex;
+    padding: 20px;
+    z-index: 1;
+    --fore: #ddd;
 }
 
 .text {
