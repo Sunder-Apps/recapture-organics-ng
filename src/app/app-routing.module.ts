@@ -8,6 +8,7 @@ import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { InfoComponent } from './info/info.component';
+import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,13 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       animation: 'home'
+    }
+  },
+  {
+    path: 'shop',
+    component: ShopComponent,
+    data: {
+      animation: 'shop'
     }
   },
   {

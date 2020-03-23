@@ -63,7 +63,8 @@ export class AppComponent {
     let elements = document.getElementsByClassName('vp-fade-in')
     for (var i = 0; i < elements.length; i++) {
       if (elements[i].getBoundingClientRect().top < window.innerHeight * 3 / 4) {
-        elements[i].classList.add('visible')
+        elements[i].classList.add('offset-' + i + '00')
+        elements[i].classList.add('visible');
       }
     }
   }

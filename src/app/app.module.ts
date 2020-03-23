@@ -21,7 +21,8 @@ import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
 import { SubscribeComponent } from './subscribe/subscribe.component'
 import { NavbarComponent } from './navbar/navbar.component';
-import { InfoComponent } from './info/info.component'
+import { InfoComponent } from './info/info.component';
+import { ShopComponent } from './shop/shop.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { InfoComponent } from './info/info.component'
     AboutComponent,
     SubscribeComponent,
     NavbarComponent,
-    InfoComponent
+    InfoComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
