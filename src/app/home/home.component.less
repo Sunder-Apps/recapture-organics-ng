@@ -1,11 +1,13 @@
 // out: false
+@import '../../global.less';
+
 h1, h2 {
     text-transform: uppercase;
 }
 
 h1 {
     margin: 0;
-    font-size: 5em;
+    .fluid(font-size, 300px, 1200px, 45px, 75px);
 }
 
 h2 {

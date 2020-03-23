@@ -6,33 +6,44 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AnalysisComponent } from './analysis/analysis.component';
 import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {
+      animation: 'home'
+    }
   },
   {
     path: 'products',
-    component: ProductsComponent
+    component: ProductsComponent,
+    data: {
+      animation: 'products'
+    }
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {
+      animation: 'about'
+    }
   },
   {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'subscribe',
-    component: SubscribeComponent
+    path: 'info',
+    component: InfoComponent,
+    data: {
+      animation: 'info'
+    }
   },
   {
     path: 'settings',
-    component: SettingsComponent
+    component: SettingsComponent,
+    data: {
+      animation: 'settings'
+    }
   },
   {
     path: 'analysis',
@@ -40,12 +51,17 @@ const routes: Routes = [
   },
   {
     path: "**",
-    component: NotFoundComponent
+    component: NotFoundComponent,
+    data: {
+      animation: 'not-found'
+    }
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

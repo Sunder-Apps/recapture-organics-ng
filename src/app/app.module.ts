@@ -9,21 +9,19 @@ import { SettingsComponent } from './settings/settings.component'
 import { NotFoundComponent } from './not-found/not-found.component'
 import { AlertsComponent } from './alerts/alerts.component'
 import { DefaultDialogComponent } from './alerts/default-dialog/default-dialog.component'
-import { BackgroundComponent } from './background/background.component'
 import { FooterComponent } from './footer/footer.component'
 import { CryptoService } from './crypto/crypto.service'
 import { SettingsService } from './settings/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
-import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material'
-import { BarsComponent } from './bars/bars.component'
-import { LeftComponent } from './bars/left/left.component'
+import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule } from '@angular/material'
 import { AnalysisComponent } from './analysis/analysis.component';
 import { ProductsComponent } from './products/products.component';
-import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { SubscribeComponent } from './subscribe/subscribe.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { InfoComponent } from './info/info.component'
 
 @NgModule({
   declarations: [
@@ -33,15 +31,13 @@ import { SubscribeComponent } from './subscribe/subscribe.component'
     NotFoundComponent,
     AlertsComponent,
     DefaultDialogComponent,
-    BackgroundComponent,
     FooterComponent,
-    BarsComponent,
-    LeftComponent,
     AnalysisComponent,
     ProductsComponent,
-    ContactComponent,
     AboutComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    NavbarComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +51,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component'
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatCardModule,
     GoogleChartsModule.forRoot()
   ],
   providers: [

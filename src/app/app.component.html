@@ -1,5 +1,6 @@
-<app-background></app-background>
-<router-outlet></router-outlet>
-<app-bars></app-bars>
+<main [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</main>
+<app-navbar></app-navbar>
 <app-footer></app-footer>
 <app-alerts></app-alerts>

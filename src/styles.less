@@ -8,6 +8,10 @@
     outline-color: var(--brah-blue)
 }
 
+html {
+    background-color: var(--back);
+}
+
 body {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -18,12 +22,17 @@ body {
     .fluid(font-size, 576px, 1200px, 16px, 20px);
 
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     color: var(--fore);
     background-color: var(--back);
+    background: var(--grad);
     overflow-x: hidden;
+
+    &::after {
+        background-color: red;
+    }
 }
 
 input {
@@ -33,7 +42,7 @@ input {
 // Text Styles
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    font-family: 'JosefinSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'EB Garamond', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     text-shadow: 0px 0px 10px var(--back);
 }
 
@@ -105,6 +114,10 @@ a {
         .fa-napster {
             color: var(--napster-1);
         }
+
+        .fa-linkedin {
+            color: var(--linkedin)
+        }
     }
 
     &.active {
@@ -121,11 +134,11 @@ a {
 // Container for Pages
 .container {
     max-width: unset;
-    padding: 20px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+    padding: var(--padding);
+    padding-bottom: ~"calc(var(--footer-h) + var(--padding))";
+    padding-top: ~"calc(var(--nav-h) + var(--padding))";
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: ~"calc(100vh - var(--nav-h) - var(--footer-h) - var(--padding) * 2)";
 
     &.se {
         display: flex;
@@ -160,11 +173,11 @@ a {
 // A page to format sections
 .page {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    min-height: ~"calc(100vh - 70px)";
-    margin-top: ~"calc(100vh - 70px)";
+    min-height: ~"calc(100vh - var(--nav-h) - var(--footer-h) - var(--padding) * 2)";
+    //margin-top: ~"calc(100vh - var(--nav-h) - var(--padding))";
 
     &:first-of-type {
         margin-top: 0;
@@ -172,6 +185,50 @@ a {
 
     &.v {
         flex-direction: column;
+    }
+}
+
+// A grid of equal-width items
+.grid-w {
+    column-width: 245px;
+
+    .item {
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+    }
+
+    img, video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// A grid of equal-height columna
+.grid-h {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 350px);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+@media (max-width: 1500px) {
+    .grid-h {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid-h {
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-h {
+        grid-template-columns: repeat(1, 350px);
     }
 }
 
@@ -215,6 +272,10 @@ mat-form-field {
         align-items: center;
         color: var(--fore);
     }
+}
+
+mat-card {
+    overflow: hidden;
 }
 
 [mat-flat-button] {
@@ -275,9 +336,6 @@ mat-nav-list {
     }
 }
 
-    
-
-
 .bg {
     display: block;
     opacity: 0;
@@ -285,16 +343,15 @@ mat-nav-list {
     width: 0;
 }
 
-@media (orientation: portrait) {
-    .container {
-        padding-top: 80px;
-        padding-left: 20px;
-    }
+.vp-fade-in {
+    opacity: 0 !important;
+    transform: translateY(-100px) !important;
+    transition: opacity 500ms, transform 500ms, box-shadow 280ms cubic-bezier(.4,0,.2,1) !important;
+    pointer-events: none;
 
-    .page {
-        min-height: ~"calc(100vh - 130px)";
-        margin-top: ~"calc(100vh - 130px)";
+    &.visible {
+        opacity: 1 !important;
+        transform: unset !important;
+        pointer-events: auto !important;
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

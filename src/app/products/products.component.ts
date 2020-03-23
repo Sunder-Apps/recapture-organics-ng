@@ -9,39 +9,27 @@ export class ProductsComponent implements OnInit {
 
   products:any[] = [
     {
-      name: 'Organic Flower',
-      description: 'Organically grown, locally sourced, carefully packaged.  Our non-GMO, USDA Organic flower provides the most authentic combination of cannabinoids and terpenes.',
-      icon: 'fas fa-cannabis',
+      name: 'Full-Spectrum Hemp Oil',
+      description: 'Containing the exact cannabinoid and terpene profile as the flower that bore it, Full-Spectrum Hemp Oil gives you the complete cannabinoid experience, harnessing the power of the entourage effect.',
+      icon: 'fas fa-rainbow',
       image: 'https://i.imgur.com/0yLPKhJ.jpg'
     },
     {
-      name: 'Live Oil',
-      description: 'Live Oil is extracted from flash-frozen flower for the highest-quality and most potent cannabinoid concentrate on the market.',
-      icon: 'fas fa-oil-can',
+      name: 'Broad-Spectrum Hemp Oil',
+      description: 'Broad-Spectrum Hemp Oil is guaranteed THC-free! While the Full-Spectrum Hemp Oil contains under the legal limit of 0.3% THC, this oil contains none.  Perfect for those who must pass a drug test or who don\'t like the effects of THC.',
+      icon: 'fas fa-chart-pie',
       image: 'https://i.imgur.com/u5ZXs4E.jpg'
     },
     {
-      name: 'Full-Spectrum Hemp Oil',
-      description: 'Hemp-derived CBD with high cannabinoid & terpene retention.',
-      icon: 'fas fa-tint',
-      image: 'https://i.imgur.com/u5ZXs4E.jpg',
-    },
-    {
-      name: 'CBD Distillate',
-      description: 'Purified broad-spectrum oil, distilled to remove terpenes, fats & lipids.',
-      icon: 'fas fa-flask',
+      name: 'Full-Spectrum Healing Balm',
+      description: 'Find relief from pain with our Full-Spectrum Healing Balm.  Rub on the area of pain and wait 1 to 2 hours for relief.',
+      icon: 'fas fa-rainbow',
       image: 'https://i.imgur.com/zV97G87.jpg'
     },
     {
-      name: 'Water-Soluable CBD',
-      description: 'Using nanoemulsion, CBD oil is rendered soluble for beverages.',
-      icon: 'fas fa-water',
-      image: 'https://i.imgur.com/u5ZXs4E.jpg'
-    },
-    {
-      name: 'CBD Isolate',
-      description: 'CBD molecule isolated from other compounds, delivered in a fine crystalline powder form.',
-      icon: 'fas fa-cannabis',
+      name: 'Broad-Spectrum Healing Balm',
+      description: 'Find relief from pain with our Broad-Spectrum Healing Balm without the effects of THC.  Rub on the area of pain and wait 1 to 2 hours for relief.',
+      icon: 'fas fa-chart-pie',
       image: 'https://i.imgur.com/MQyS5vH.jpg'
     }
   ]
