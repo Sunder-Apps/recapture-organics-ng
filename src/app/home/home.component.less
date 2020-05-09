@@ -98,6 +98,21 @@
     }
 }
 
+@media (max-width: 1080px) {
+
+    .navbar {
+        height: var(--nav-mobile-h);
+    }
+    .section {
+        &.intro {
+            padding-left: 10%;
+            h2 {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
 @media (max-width: 650px) {
     .container {
         padding: 0;
@@ -125,18 +140,13 @@
         &.resources {
             flex-direction: column;
         }
-    }
-}
 
-@media (max-width: 1080px) {
-
-    .navbar {
-        height: var(--nav-mobile-h);
-    }
-    .section {
         &.intro {
-            h2 {
-                margin-top: 25px;
+            text-align: center;
+            padding-left: var(--padding);
+
+            h2, h3 {
+                text-align: center;
             }
         }
     }
