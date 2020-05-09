@@ -71,6 +71,7 @@ ul {
 li {
     padding: 10px 20px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .social {
@@ -90,4 +91,10 @@ li {
 hr {
     margin: 0;
     border-color: var(--back);
+}
+
+@media (max-width: 600px) {
+    ul {
+        flex-wrap: wrap;
+    }
 }
