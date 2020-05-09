@@ -67,6 +67,11 @@ export class AppComponent {
         elements[i].classList.add('visible');
       }
     }
+    elements = document.getElementsByClassName('vp-scale-in')
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.add('offset-' + i + '00')
+      elements[i].classList.add('visible');
+    }
   }
 
   prepareRoute(outlet: RouterOutlet) {

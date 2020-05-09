@@ -1,9 +1,28 @@
 <footer>
-    <span><p>&copy; Recapture Organics&nbsp;&nbsp;&mdash;&nbsp;&nbsp;v2020.02.29</p></span>
-    <span>
-        <a href="https://www.instagram.com/recaptureorganics/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/recapture.organics"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/recapture-organics-476753196/"><i class="fab fa-linkedin"></i></a>
-    </span>
-    <span><i class="fas fa-code" matTooltip="Developed"></i><p> with </p><i class="fas fa-cannabis" matTooltip="positive vibes"></i><p> by </p><a href="https://www.sunderapps.com/" target="_blank" matTooltip="Sunder Apps"><img class="sunder" src="https://i.imgur.com/y1zkxwA.png" /></a></span>
+    <div class="logo" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <img src="https://i.imgur.com/bXHktM4.png" />
+        <h1>Recapture<br/><span>Organics</span></h1>
+    </div>
+    <ul>
+        <li routerLink="/about" routerLinkActive="active">About Our Products</li>
+        <li routerLink="/privacy-policy" routerLinkActive="active">Privacy Policy</li>
+        <li routerLink="/terms-and-conditions" routerLinkActive="active">Terms and Conditions</li>
+        <li><a href="mailto:recaptureorganics@gmail.com" target="_blank">Contact</a></li>
+    </ul>
+    <div class="social">
+        <a href="https://www.instagram.com/recaptureorganics/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/recapture.organics" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/recapture-organics-476753196/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+<hr/>
+<footer>
+    <p class="footnote">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Recapture Organics assumes no responsibility for the improper use of and self-diagnosis and/or treatment using these products. Our products should not be confused with prescription medicine and they should not be used as a substitute for medically supervised therapy.</p>
+</footer>
+<footer>
+    <span>&copy; 2019 &mdash; {{ this.currentYear }} Recapture Organics. All rights reserved.</span>
+</footer>
+<footer>
+    <span><i class="fas fa-code" matTooltip="Developed"></i><p> with </p><i class="fas fa-cannabis" matTooltip="positive vibes"></i><p> by </p><a href="https://www.sunderapps.com/" target="_blank" matTooltip="Sunder Apps"><img class="sunder" src="https://i.imgur.com/cxiJdRZ.png" /></a></span>
+    <span><i class="fas fa-palette" matTooltip="Designed"></i><p> by </p><a href="https://www.chancebrinkman-sull.com/" target="_blank" matTooltip="Chance Brinkman-Sull"><img class="sunder" src="https://i.imgur.com/4lMCbiV.png" /></a></span>
 </footer>

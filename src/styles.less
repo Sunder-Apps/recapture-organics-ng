@@ -29,9 +29,40 @@ body {
     background-color: var(--back);
     background: var(--grad);
     overflow-x: hidden;
+}
 
-    &::after {
-        background-color: red;
+main {
+    position: relative;
+    min-height: ~"calc(100vh)";
+}
+
+router-outlet {
+    min-height: ~"calc(100vh - var(--nav-h))";
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        width: 100px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;
+        line-height: 18px;
+        font-weight: 700;
+        margin: 5px 0;
+        white-space: nowrap;
+    }
+
+    span {
+        color: var(--black);
+        font-size: 25px;
     }
 }
 
@@ -41,34 +72,58 @@ input {
 
 // Text Styles
 h1, h2, h3, h4, h5, h6 {
-    text-align: center;
     font-family: 'EB Garamond', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-shadow: 0px 0px 10px var(--back);
+    width: 100%;
+    max-width: var(--app-w);
+    margin: 50px 0;
+    text-align: left;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 h1 {
-    font-size: 4em;
-    font-family: 'EB Garamond', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 100;
-    text-transform: uppercase;
+
 }
 
 h2 {
-    font-size: 2em;
+    .fluid(font-size, 300px, 1200px, 35px, 48px);
+    letter-spacing: -0.5px;
 }
 
 h3 {
-    font-size: 1em;
-    font-style: italic;
+    .fluid(font-size, 300px, 1200px, 30px, 60px);
+    letter-spacing: 0px;
+}
+
+h4 {
+    margin: 20px 0;
+    .fluid(font-size, 300px, 1200px, 28px, 34px);
+    font-weight: 800;
+    letter-spacing: 0.25px;
+}
+
+h5 {
+    margin: 0;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 p {
-    font-size: 1em;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    letter-spacing: 0.5px;
     text-align: left;
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+}
+
+span {
+    color: var(--primary);
 }
 
 // Links
@@ -134,11 +189,8 @@ a {
 // Container for Pages
 .container {
     max-width: unset;
-    padding: var(--padding);
-    padding-bottom: ~"calc(var(--footer-h) + var(--padding))";
-    padding-top: ~"calc(var(--nav-h) + var(--padding))";
+    padding: 0;
     overflow-x: hidden;
-    //min-height: ~"calc(100vh - var(--nav-h) - var(--footer-h) - var(--padding) * 2)";
 
     &.se {
         display: flex;
@@ -162,12 +214,9 @@ a {
 
 // Sections in a container
 .section {
-    max-width: 1000px;
-    background-color: var(--trans);
-    border-radius: 25px;
-    padding: 25px;
+    max-width: var(--app-w);
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 // A page to format sections
@@ -256,12 +305,68 @@ mat-label {
     i {
         padding: 0;
         font-size: 16px;
+        color: var(--fore);
     }
 }
 
-mat-form-field {
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--fore);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--fore);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--fore);
+  }
+
+  .ng-touched::-webkit-input-placeholder { color: red; }
+.ng-untouched::-webkit-input-placeholder { color: red; }
+
+mat-form-field.mat-form-field {
     width: 100%;
-    max-width: 700px;
+    max-width: 350px;
+    color: var(--fore);
+
+    &.mat-focused {
+        border-color: var(--fore);
+        .mat-form-field-label {
+            color: var(--fore);
+        }
+    }
+}
+
+.placeholder {
+    color: var(--fore) !important;
+}
+
+.mat-form-field-placeholder {
+    color: var(--fore) !important;
+}
+
+.mat-form-field-underline {
+    background-color: var(--fore) !important;
+}
+
+.mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: var(--fore) !important;
+   }
+  
+   .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: var(--fore) !important;
+  } 
+  
+  .mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: var(--fore) !important;;
+  }
+
+.mat-form-field-label {
+    color: var(--fore);
 }
 
 .mat-form-field-hint-wrapper {
@@ -293,14 +398,34 @@ mat-card {
 
 [mat-raised-button] {
     font-size: 1.2em;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     text-transform: uppercase;
 
     &.mat-raised-button {
-        padding: 12px 16px;
-    }
+        padding: 7px 12px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: var(--primary);
 
-    i {
-        font-size: 1.5em;
+        &.mat-accent {
+            color: var(--fore);
+            background-color: var(--back);
+
+            span {
+                color: var(--fore);
+            }
+        }
+
+        span {
+            padding: 0 20px;
+            color: var(--back);
+        }
+
+        i {
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -352,6 +477,17 @@ mat-nav-list {
     &.visible {
         opacity: 1 !important;
         transform: unset !important;
+        pointer-events: auto !important;
+    }
+}
+
+&.vp-scale-in {
+    transform: scale(0.1) !important;
+    transition: transform 1s ease-out;
+    pointer-events: none;
+
+    &.visible {
+        transform: scale(1) !important;
         pointer-events: auto !important;
     }
 }

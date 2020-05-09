@@ -13,7 +13,7 @@ export class AlertsService {
   alerts:Observable<Alert[]> = this.subject.asObservable()
   listId:string = 'brah-alerts-0'
   list:Alert[] = [
-    {
+    /*{
       alertId: 'alerts-dev-0',
       alertClass: 'info',
       disabled: false,

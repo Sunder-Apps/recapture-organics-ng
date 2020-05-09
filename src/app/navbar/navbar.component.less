@@ -4,20 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: relative;
     top: 0;
-    left: 50%;
+    left: 0;
     width: 100%;
     height: var(--nav-h);
-    transform: translateX(-50%) translateY(-100px) !important;
-    background-color: var(--back);
-    //box-shadow: 0px 0px 10px 10px var(--white);
-    border-bottom: solid 2px var(--gray);
+    background-color: transparent;
     z-index: 99999999;
-
-    &.visible {
-        transform: translateX(-50%) translateY(0px) !important;
-    }
 
     &.hidden {
         display: none;
@@ -28,35 +21,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1080px;
+    max-width: var(--app-w);
     width: 100%;
     height: 100%;
-}
-
-img {
-    width: 100px;
-}
-
-h1 {
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 22px;
-    line-height: 18px;
-    font-weight: 700;
-    margin: 0 20px;
-    white-space: nowrap;
-    // NOTE: I want a better animation here.
-    //       something that bounces back
-    transition: margin-left 1s ease-in-out;
-
-    &.timeline {
-        margin-left: 130px;
-    }
-}
-
-span {
-    color: var(--black);
-    font-size: 25px;
+    padding: 0 20px;
 }
 
 ul {
@@ -69,8 +37,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 5px;
-    font-size: 18px;
+    padding: 0 20px;
+    font-size: 20px;
 
     div {
         display: flex;
@@ -83,11 +51,6 @@ li {
             margin: 0 5px;
         }
     }
-}
-
-#logo {
-    display: flex;
-    align-items: center;
 }
 
 @media (max-width: 1080px) {
