@@ -6,6 +6,7 @@ import { CryptoService } from './crypto/crypto.service';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators'
 import { RouterAnimations } from './anime/anime';
+import { ShopService } from './services/shop.service';
 
 @Component({
   selector: 'app-root',
@@ -26,9 +27,12 @@ export class AppComponent {
                  .pipe(throttleTime(200))
                  .subscribe(() => this.onScrollEvent())
 
-  constructor (private router:Router, 
+  constructor (
+    private router:Router, 
     private settingsService:SettingsService,
-    private cryptoService:CryptoService) {
+    private cryptoService:CryptoService,
+    private shopService:ShopService
+    ) {
     this.settingsService.settings.subscribe(settings => {
       if (settings) {
           this.theme = settings.theme

@@ -23,6 +23,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component'
 import { NavbarComponent } from './navbar/navbar.component';
 import { InfoComponent } from './info/info.component';
 import { ShopComponent } from './shop/shop.component'
+import { ShopService } from './services/shop.service'
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ShopComponent } from './shop/shop.component'
   providers: [
     CryptoService,
     SettingsService,
-    StorageService
+    StorageService,
+    ShopService
   ],
   entryComponents: [
     DefaultDialogComponent

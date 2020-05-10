@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShopService } from '../services/shop.service';
+import { Catalog } from '../objects/catalog';
 
 @Component({
   selector: 'app-shop',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.less']
 })
 export class ShopComponent implements OnInit {
-
-  constructor() { }
+  catalog: Catalog
+  constructor(
+    private shopService: ShopService
+  ) { }
 
   ngOnInit() {
+    this.shopService.obsCatalog.subscribe((catalog: Catalog) => {
+      this.catalog = catalog
+    })
   }
-
 }
