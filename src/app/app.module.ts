@@ -24,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InfoComponent } from './info/info.component';
 import { ShopComponent } from './shop/shop.component'
 import { ShopService } from './services/shop.service'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ShopService } from './services/shop.service'
     MatInputModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    GoogleChartsModule.forRoot()
+    GoogleChartsModule.forRoot(),
+    HttpClientModule
   ],
   providers: [
     CryptoService,
