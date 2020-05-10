@@ -5,8 +5,7 @@ import { Catalog } from '../objects/catalog';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.less'],
-  providers: [ShopService]
+  styleUrls: ['./shop.component.less']
 })
 export class ShopComponent implements OnInit {
   catalog: Catalog

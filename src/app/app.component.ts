@@ -30,7 +30,8 @@ export class AppComponent {
   constructor (
     private router:Router, 
     private settingsService:SettingsService,
-    private cryptoService:CryptoService
+    private cryptoService:CryptoService,
+    private shopService:ShopService
     ) {
     this.settingsService.settings.subscribe(settings => {
       if (settings) {
