@@ -33,6 +33,7 @@ export class ShopComponent implements OnInit {
     this.variations = []
     if (this.catalog) {
       this.catalog.forEach(item => {
+        console.log(item.item_data.variations)
         this.variations.concat(item.item_data.variations)
       })
     }
