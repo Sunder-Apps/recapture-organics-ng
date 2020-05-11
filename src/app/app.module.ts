@@ -15,7 +15,7 @@ import { SettingsService } from './settings/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
-import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule } from '@angular/material'
+import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule, MatListModule } from '@angular/material'
 import { AnalysisComponent } from './analysis/analysis.component';
 import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
@@ -24,7 +24,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InfoComponent } from './info/info.component';
 import { ShopComponent } from './shop/shop.component'
 import { ShopService } from './services/shop.service'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.component'
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http'
     SubscribeComponent,
     NavbarComponent,
     InfoComponent,
-    ShopComponent
+    ShopComponent,
+    CartComponent,
+    CartSheetComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +60,7 @@ import { HttpClientModule } from '@angular/common/http'
     MatInputModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatListModule,
     GoogleChartsModule.forRoot(),
     HttpClientModule
   ],

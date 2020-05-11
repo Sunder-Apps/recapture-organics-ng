@@ -1,0 +1,5 @@
+<button mat-raised-button color="accent" (click)="this.openCart()">
+    <i class="fas fa-shopping-cart"></i>
+    {{ this.total / 100 | currency }}
+    <i class="badge">{{ this.numItems }}</i>
+</button>
