@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ "$1" = "-apps" ]; then
+if [ "$1" = "--apps" ]; then
     ng build --prod --base-href=./
     cp ./docs/index.html ./docs/404.html
     rm -r ../recapture-organics-cv/www
