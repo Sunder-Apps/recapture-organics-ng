@@ -7,8 +7,10 @@
                         <h5>{{ item.item_data.name }}</h5>
                         <h4>{{ variation.item_variation_data.name }}</h4>
                         <p>{{ item.item_data.description }}</p>
-                        <button mat-raised-button color="accent">ADD TO CART</button>
-                        <span class="price">{{ variation.item_variation_data.price_money.amount / 100 | currency }}</span>
+                        <div class="buy">
+                            <button mat-raised-button color="accent">ADD TO CART</button>
+                            <span class="price">{{ variation.item_variation_data.price_money.amount / 100 | currency }}</span>
+                        </div>
                     </div>
                     <div class="img" style="background-image: url(https://i.imgur.com/T9zEkby.png); background-position: 100% 50%;"></div>
                 </div>
