@@ -2,21 +2,16 @@
     <div class="catalog">
         <div class="wrapper" *ngFor="let item of this.catalog">
             <div class="item" *ngIf="!item.is_deleted">
-                <mat-card *ngFor="let variation of item.item_data.variations">
-                    <mat-card-header>
-                        <div mat-card-avatar></div>
-                        <mat-card-title>{{ variation.item_variation_data.name }}</mat-card-title>
-                        <mat-card-subtitle>{{ item.item_data.name }}</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                    <mat-card-content>
+                <div class="section vp-fade-in" *ngFor="let variation of item.item_data.variations">
+                    <div class="text">
+                        <h5>{{ item.item_data.name }}</h5>
+                        <h4>{{ variation.item_variation_data.name }}</h4>
                         <p>{{ item.item_data.description }}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-button>Add to Cart</button>
+                        <button mat-raised-button color="accent">ADD TO CART</button>
                         <span>{{ variation.item_variation_data.price_money.amount / 100 | currency }}</span>
-                    </mat-card-actions>
-                </mat-card>
+                    </div>
+                    <div class="img" style="background-image: url(https://i.imgur.com/T9zEkby.png); background-position: 100% 50%;"></div>
+                </div>
             </div>
         </div>
     </div>

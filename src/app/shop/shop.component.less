@@ -1,12 +1,39 @@
 // out: false
 
+@import '../../global.less';
+
 mat-card {
     max-width: 500px;
 }
 
-.item {
+.section {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: var(--padding) auto;
+    color: var(--back);
+
+    h3, h4, h5 {
+        white-space: normal;
+    }
+
+    .text, .img {
+        width: 50%;
+    }
+
+    .text {
+        padding: 0;
+        .fluid(padding-left, 650px, 1200px, 25px, 100px);
+        .fluid(padding-right, 650px, 1200px, 25px, 100px);
+    }
+
+    .img {
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+    }
 }
