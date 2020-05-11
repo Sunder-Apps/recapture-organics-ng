@@ -18,7 +18,6 @@
                         <h4>{{ variation.item_variation_data.name }}</h4>
                         <p>{{ item.item_data.description }}</p>
                         <p class="price">{{ variation.item_variation_data.price_money.amount / 100 | currency }} <sub>+ tax</sub></p>
-                        <p>Quantity: {{ variation.quantity }}</p>
                         <button mat-raised-button color="accent" *ngIf="!variation.quantity; else quantityInput" (click)="this.addToCart(item.id, variation.id)">ADD TO CART</button>
                         <ng-template #quantityInput>
                             <mat-form-field>

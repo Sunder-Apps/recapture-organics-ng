@@ -28,6 +28,12 @@ export class ShopComponent implements OnInit {
   }
 
   updateCart (itemID: string, variationID: string, event) {
-    console.log(event);
+    if (event && event.target) {
+      let val = event.target.value
+      let int = parseInt(val)
+      if (!isNaN(int) && int >= 0 && int <= 100) {
+        this.shopService.setQuantity(itemID, variationID, int)
+      }
+    }
   }
 }
