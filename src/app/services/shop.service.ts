@@ -21,7 +21,7 @@ export class ShopService {
     this.httpClient.get<any>(this.getItemsUrl).subscribe(data => {
       this.catalog = data.objects.filter((item: Item) => {
         return item.present_at_location_ids.includes(this.locationID)
-      });
+      })
       this.subCatalog.next(this.catalog)
     })
   }
