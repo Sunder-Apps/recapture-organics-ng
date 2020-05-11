@@ -10,34 +10,16 @@ import { Variation } from '../objects/variation';
 })
 export class ShopComponent implements OnInit {
   catalog: Item[]
-  variations: Variation[]
   constructor(
     private shopService: ShopService
   ) {
-    console.log('shopConstruct')
-    this.shopService.obsCatalog.subscribe((catalog: Item[]) => {
-      this.catalog = catalog
-      this.updateVariations()
-    })
+    this.shopService.obsCatalog.subscribe(catalog => this.catalog = catalog)
   }
 
   ngOnInit() {
     this.catalog = this.shopService.catalog
-    this.updateVariations()
     if (!this.catalog) {
       this.shopService.updateCatalog()
     }
-  }
-
-  updateVariations () {
-    this.variations = []
-    if (this.catalog) {
-      this.catalog.forEach(item => {
-        
-        this.variations = this.variations.concat(item.item_data.variations)
-        console.log(item.item_data.variations, this.variations)
-      })
-    }
-    console.log('updateVariations', this.catalog, this.variations)
   }
 }
