@@ -36,5 +36,6 @@ export class ShopComponent implements OnInit {
         this.variations.concat(item.item_data.variations)
       })
     }
+    console.log('updateVariations', this.catalog, this.variations)
   }
 }
