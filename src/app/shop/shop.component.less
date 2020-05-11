@@ -9,7 +9,7 @@ mat-card {
 .price {
     margin: 0 0 10px 10px;
     color: var(--fore);
-    .fluid(font-size, 300px, 1200px, 35px, 48px);
+    font-size: 27px;
 }
 
 .section {
@@ -43,5 +43,76 @@ mat-card {
     &:nth-of-type(2n) {
         flex-direction: row-reverse;
         background-color: var(--accent-2);
+    }
+
+    &.mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: unset;
+        min-height: 267px;
+        margin: 20px ~"calc(var(--padding) * -1)" var(--padding) ~"calc(var(--padding) * -1)";
+        background-color: var(--accent-1);
+    
+        img {
+            position: absolute;
+            height: 100%;
+            z-index: 0;
+        }
+    
+        h5, h3 {
+            position: relative;
+            width: 100vw;
+            margin: 0;
+            text-align: center;
+            color: var(--back);
+            z-index: 1;
+            white-space: normal;
+        }
+
+        h3 {
+            padding: 0 20px;
+            .fluid(font-size, 300px, 1200px, 35px, 48px);
+            letter-spacing: -0.5px;
+        }
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .section {
+        &.intro {
+            padding-left: 10%;
+            h2 {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .section {
+        padding: 0;
+        flex-direction: column-reverse;
+        
+        .text, .img {
+            width: 100vw;
+            margin: 0;
+        }
+
+        .text {
+            padding: 25px;
+        }
+
+        &.intro {
+            text-align: center;
+            padding-left: var(--padding);
+
+            h2, h3 {
+                text-align: center;
+            }
+        }
     }
 }
