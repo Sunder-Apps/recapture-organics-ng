@@ -25,4 +25,16 @@ export class ShopService {
       this.subCatalog.next(this.catalog)
     })
   }
+
+  setQuantity (itemID: string, variationID: string, quantity: number) {
+    if (quantity > -1 && quantity < 100) {
+      if (this.catalog) {
+        let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID);
+        if (variation) {
+          variation.quantity = quantity
+          this.subCatalog.next(this.catalog)
+        }
+      }
+    }
+  }
 }
