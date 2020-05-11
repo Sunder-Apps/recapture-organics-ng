@@ -9,7 +9,7 @@ import { Item } from '../objects/item';
 export class ShopService {
   private getItemsUrl: string = 'https://sunder-functions20190319082035.azurewebsites.net/api/ROGetItems?code=HY2haXS0ndupb2u3dZEtkHaQ3QYONMLtgLH/2vW3Vd3vYMv4lwcdMg=='
   private locationID: string = 'R7GBGZNS5QYQV'
-  private catalog: Item[]
+  public catalog: Item[]
   private subCatalog: Subject<Item[]> = new Subject<Item[]>()
   public obsCatalog = this.subCatalog.asObservable()
 

@@ -12,10 +12,16 @@ export class ShopComponent implements OnInit {
   constructor(
     private shopService: ShopService
   ) {
+    console.log('shopConstruct')
     this.shopService.obsCatalog.subscribe((catalog: Item[]) => {
       this.catalog = catalog
     })
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log('shopInit')
+    if (!this.catalog) {
+      this.shopService.updateCatalog()
+    }
+  }
 }

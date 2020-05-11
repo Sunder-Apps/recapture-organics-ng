@@ -33,6 +33,7 @@ export class AppComponent {
     //private cryptoService:CryptoService,
     private shopService:ShopService
     ) {
+      console.log('appConstruct')
     this.settingsService.settings.subscribe(settings => {
       if (settings) {
           this.theme = settings.theme
@@ -47,8 +48,9 @@ export class AppComponent {
   }
 
   ngOnInit () {
+    console.log('appInit')
     //this.cryptoService.init()
-    this.shopService.updateCatalog()
+    //this.shopService.updateCatalog()
   }
 
   @HostListener('document:keydown', ['$event'])
