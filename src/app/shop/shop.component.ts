@@ -19,7 +19,7 @@ export class ShopComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('shopInit')
+    this.catalog = this.shopService.catalog
     if (!this.catalog) {
       this.shopService.updateCatalog()
     }
