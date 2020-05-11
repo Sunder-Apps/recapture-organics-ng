@@ -15,12 +15,12 @@ export class ShopService {
 
   constructor(
     private httpClient: HttpClient
-  ) {
-    this.updateCatalog()
-  }
+  ) { }
 
   updateCatalog () {
+    console.log('updateCatalog')
     this.httpClient.get<any>(this.getItemsUrl).subscribe(data => {
+      console.log('afterGet', data)
       this.catalog = data.objects.filter((item: Item) => {
         return item.present_at_location_ids.includes(this.locationID)
       });

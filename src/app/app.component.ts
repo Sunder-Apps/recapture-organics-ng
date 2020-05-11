@@ -48,6 +48,7 @@ export class AppComponent {
 
   ngOnInit () {
     //this.cryptoService.init()
+    this.shopService.updateCatalog()
   }
 
   @HostListener('document:keydown', ['$event'])
