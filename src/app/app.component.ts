@@ -30,7 +30,7 @@ export class AppComponent {
   constructor (
     private router:Router, 
     private settingsService:SettingsService,
-    private cryptoService:CryptoService,
+    //private cryptoService:CryptoService,
     private shopService:ShopService
     ) {
     this.settingsService.settings.subscribe(settings => {
@@ -47,7 +47,7 @@ export class AppComponent {
   }
 
   ngOnInit () {
-    this.cryptoService.init()
+    //this.cryptoService.init()
   }
 
   @HostListener('document:keydown', ['$event'])
