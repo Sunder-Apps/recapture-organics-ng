@@ -6,12 +6,18 @@ mat-card {
     max-width: 500px;
 }
 
+.price {
+    color: var(--fore);
+    .fluid(font-size, 300px, 1200px, 30px, 60px);
+}
+
 .section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: var(--padding) auto;
     color: var(--back);
+    background-color: var(--accent-1);
 
     h3, h4, h5 {
         white-space: normal;
@@ -35,5 +41,6 @@ mat-card {
 
     &:nth-of-type(2n) {
         flex-direction: row-reverse;
+        background-color: var(--accent-2);
     }
 }
