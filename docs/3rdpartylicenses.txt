@@ -89,9 +89,13 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/core
+
 @angular/material/dialog
 
 @angular/material/form-field
+
+@angular/material/list
 
 @angular/material/tooltip
 

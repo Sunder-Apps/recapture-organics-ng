@@ -71,7 +71,8 @@ import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.compone
     ShopService
   ],
   entryComponents: [
-    DefaultDialogComponent
+    DefaultDialogComponent,
+    CartSheetComponent
   ],
   bootstrap: [
     AppComponent
