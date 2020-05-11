@@ -23,7 +23,7 @@
                         <ng-template #quantityInput>
                             <mat-form-field>
                                 <mat-label>Quantity:</mat-label>
-                                <input matInput type="number" min="0" max="100" />
+                                <input matInput type="number" min="0" max="100" (change)="this.updateCart(item.id, variation.id, $event)" />
                               </mat-form-field>
                         </ng-template>
                     </div>
