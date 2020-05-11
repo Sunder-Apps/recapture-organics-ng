@@ -19,11 +19,11 @@ export class CartComponent implements OnInit {
     private shopService: ShopService,
     private bottomSheet: MatBottomSheet
   ) {
-    this.shopService.obsCatalog.subscribe(catalog => this.catalog = catalog)
+    this.shopService.obsCatalog.subscribe(catalog => this.updateCart())
   }
 
   ngOnInit() {
-    this.catalog = this.shopService.catalog
+    this.updateCart()
   }
 
   openCart () {
@@ -31,5 +31,19 @@ export class CartComponent implements OnInit {
       ariaLabel: 'Cart',
       data: this.catalog
     })
+  }
+
+  updateCart () {
+    this.catalog = this.shopService.catalog
+    this.total = 0
+    this.numItems = 0
+    if (this.catalog) {
+      this.catalog.forEach(item => {
+        item.item_data.variations.forEach(variation => {
+          this.numItems += variation.quantity || 0
+          this.total += (variation.quantity || 0) * variation.item_variation_data.price_money.amount
+        })
+      })
+    }
   }
 }
