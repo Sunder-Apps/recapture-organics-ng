@@ -15,7 +15,7 @@ import { SettingsService } from './settings/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
-import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule, MatListModule } from '@angular/material'
+import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule, MatListModule, MatBottomSheetModule } from '@angular/material'
 import { AnalysisComponent } from './analysis/analysis.component';
 import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
@@ -61,6 +61,7 @@ import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.compone
     MatProgressSpinnerModule,
     MatCardModule,
     MatListModule,
+    MatBottomSheetModule,
     GoogleChartsModule.forRoot(),
     HttpClientModule
   ],
