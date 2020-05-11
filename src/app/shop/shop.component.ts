@@ -31,8 +31,10 @@ export class ShopComponent implements OnInit {
 
   updateVariations () {
     this.variations = []
-    this.catalog.forEach(item => {
-      this.variations.concat(item.item_data.variations)
-    })
+    if (this.catalog) {
+      this.catalog.forEach(item => {
+        this.variations.concat(item.item_data.variations)
+      })
+    }
   }
 }
