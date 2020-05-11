@@ -1,3 +1,7 @@
 <div *ngFor="let item of this.catalog">
     <h2>{{ item.item_data.name }}</h2>
 </div>
+
+<div *ngFor="let variation of this.variations">
+    <h2>{{ variation.variation_data.name }}</h2>
+</div>

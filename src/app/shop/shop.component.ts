@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopService } from '../services/shop.service';
 import { Item } from '../objects/item';
+import { Variation } from '../objects/variation';
 
 @Component({
   selector: 'app-shop',
@@ -9,19 +10,29 @@ import { Item } from '../objects/item';
 })
 export class ShopComponent implements OnInit {
   catalog: Item[]
+  variations: Variation[]
   constructor(
     private shopService: ShopService
   ) {
     console.log('shopConstruct')
     this.shopService.obsCatalog.subscribe((catalog: Item[]) => {
       this.catalog = catalog
+      this.updateVariations()
     })
   }
 
   ngOnInit() {
     this.catalog = this.shopService.catalog
+    this.updateVariations()
     if (!this.catalog) {
       this.shopService.updateCatalog()
     }
+  }
+
+  updateVariations () {
+    this.variations = []
+    this.catalog.forEach(item => {
+      this.variations.concat(item.item_data.variations)
+    })
   }
 }
