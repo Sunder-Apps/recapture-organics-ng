@@ -17,16 +17,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
 import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule, MatListModule, MatBottomSheetModule } from '@angular/material'
 import { AnalysisComponent } from './analysis/analysis.component';
-import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
-import { SubscribeComponent } from './subscribe/subscribe.component'
 import { NavbarComponent } from './navbar/navbar.component';
-import { InfoComponent } from './info/info.component';
 import { ShopComponent } from './shop/shop.component'
 import { ShopService } from './services/shop.service'
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
-import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.component'
+import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.component';
+import { LearnComponent } from './learn/learn.component'
 
 @NgModule({
   declarations: [
@@ -38,14 +36,12 @@ import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.compone
     DefaultDialogComponent,
     FooterComponent,
     AnalysisComponent,
-    ProductsComponent,
     AboutComponent,
-    SubscribeComponent,
     NavbarComponent,
-    InfoComponent,
     ShopComponent,
     CartComponent,
-    CartSheetComponent
+    CartSheetComponent,
+    LearnComponent
   ],
   imports: [
     BrowserModule,

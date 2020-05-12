@@ -4,11 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AnalysisComponent } from './analysis/analysis.component';
-import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
-import { InfoComponent } from './info/info.component';
 import { ShopComponent } from './shop/shop.component';
+import { LearnComponent } from './learn/learn.component';
 
 const routes: Routes = [
   {
@@ -26,10 +24,10 @@ const routes: Routes = [
     }
   },
   {
-    path: 'products',
-    component: ProductsComponent,
+    path: 'learn',
+    component: LearnComponent,
     data: {
-      animation: 'products'
+      animation: 'learn'
     }
   },
   {
@@ -40,22 +38,11 @@ const routes: Routes = [
     }
   },
   {
-    path: 'info',
-    component: InfoComponent,
-    data: {
-      animation: 'info'
-    }
-  },
-  {
     path: 'settings',
     component: SettingsComponent,
     data: {
       animation: 'settings'
     }
-  },
-  {
-    path: 'analysis',
-    component: AnalysisComponent
   },
   {
     path: "**",

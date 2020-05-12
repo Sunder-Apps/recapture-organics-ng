@@ -1,17 +1,64 @@
 // out: false
-h2, p {
-    max-width: 700px;
+@import '../../global.less';
+
+.section {
+    &.header {
+        height: 400px;
+    }
 }
 
-img {
-    width: 75px;
-}
-
-.badges {
+.section {
     display: flex;
     align-items: center;
-    
-    img {
-        margin: 0 10px;
+    justify-content: flex-start;
+    margin: var(--padding) auto;
+    color: var(--fore);
+
+    h3, h4, h5 {
+        white-space: normal;
+    }
+
+    .text, .zoom-hover {
+        width: 50%;
+    }
+
+    .text {
+        padding: 0;
+        .fluid(padding-left, 650px, 1200px, 25px, 100px);
+        .fluid(padding-right, 650px, 1200px, 25px, 100px);
+    }
+
+    .img {
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &.newsletter {
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0;
+    }
+    .section {
+        padding: 0;
+        flex-direction: column;
+
+        .text, .img {
+            width: 100vw;
+            margin: 0;
+        }
+
+        .text {
+            padding: 25px;
+        }
     }
 }
