@@ -50,8 +50,10 @@ export class CartComponent implements OnInit {
     }
     if (this.numItems > 0) {
       this.open = true
-      this.changed = false;
       this.changed = true;
+      setTimeout(()=>{ 
+        this.changed = false;
+       }, 1000)
     }
   }
 }
