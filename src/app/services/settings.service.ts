@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { Observable, Subject } from 'rxjs'
-import { Settings, Theme } from './settings'
+import { Settings, Theme } from '../objects/settings'
 
 import { StorageService } from '../storage/storage.service';
 

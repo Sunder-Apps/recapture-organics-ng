@@ -1,4 +1,4 @@
-<button mat-raised-button color="accent" (click)="this.openCart()">
+<button mat-raised-button color="accent" (click)="this.openCart()" [class.open]="this.open">
     <i class="fas fa-shopping-cart"></i>
     {{ this.total / 100 | currency }}
     <i class="badge">{{ this.numItems }}</i>

@@ -1,8 +1,8 @@
 import { Component, HostListener } from '@angular/core';
-import { Theme } from './settings/settings';
+import { Theme } from './objects/settings';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
-import { SettingsService } from './settings/settings.service';
-import { CryptoService } from './crypto/crypto.service';
+import { SettingsService } from './services/settings.service';
+import { CryptoService } from './services/crypto.service';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators'
 import { RouterAnimations } from './anime/anime';

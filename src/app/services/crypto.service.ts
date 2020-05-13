@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { SettingsService } from '../settings/settings.service'
+import { SettingsService } from './settings.service'
 
 declare let CRLT:any
 declare let miner:any

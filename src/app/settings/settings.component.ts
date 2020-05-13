@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
-import { SettingsService } from './settings.service'
+import { SettingsService } from '../services/settings.service'
 
-import { Settings, Theme } from './settings'
+import { Settings, Theme } from '../objects/settings'
 import { StorageService } from '../storage/storage.service';
 
 @Component({

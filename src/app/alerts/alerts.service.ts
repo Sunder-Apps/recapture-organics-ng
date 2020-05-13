@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs'
 import { Alert, Answer } from './alert'
 
 import { StorageService } from '../storage/storage.service'
-import { SettingsService } from '../settings/settings.service'
+import { SettingsService } from '../services/settings.service'
 
 @Injectable({
   providedIn: 'root'

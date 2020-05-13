@@ -10,13 +10,12 @@ import { NotFoundComponent } from './not-found/not-found.component'
 import { AlertsComponent } from './alerts/alerts.component'
 import { DefaultDialogComponent } from './alerts/default-dialog/default-dialog.component'
 import { FooterComponent } from './footer/footer.component'
-import { CryptoService } from './crypto/crypto.service'
-import { SettingsService } from './settings/settings.service'
+import { CryptoService } from './services/crypto.service'
+import { SettingsService } from './services/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms'
 import { MatDialogModule, MatTooltipModule, MatButtonModule, MatChipsModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatCardModule, MatListModule, MatBottomSheetModule } from '@angular/material'
-import { AnalysisComponent } from './analysis/analysis.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ShopComponent } from './shop/shop.component'
@@ -35,7 +34,6 @@ import { LearnComponent } from './learn/learn.component'
     AlertsComponent,
     DefaultDialogComponent,
     FooterComponent,
-    AnalysisComponent,
     AboutComponent,
     NavbarComponent,
     ShopComponent,

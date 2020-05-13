@@ -7,9 +7,9 @@
     <div class="mission section">
         <img src="https://i.imgur.com/5kllHdN.png" />
         <h5>OUR PRODUCTS</h5>
-        <h3>Our products are made from the finest 100% USDA organic, non-gmo hemp produced in the USA.</h3>
+        <h3>made from the finest 100% USDA organic, non-gmo hemp produced in the USA.</h3>
     </div>
-    <div class="catalog">
+    <div class="catalog" *ngIf="this.catalog; else loading">
         <div class="wrapper" *ngFor="let item of this.catalog">
             <div class="item" *ngIf="!item.is_deleted">
                 <div class="section vp-fade-in" *ngFor="let variation of item.item_data.variations">
@@ -33,4 +33,7 @@
             </div>
         </div>
     </div>
+    <ng-template #loading>
+        <mat-spinner></mat-spinner>
+    </ng-template>
 </div>

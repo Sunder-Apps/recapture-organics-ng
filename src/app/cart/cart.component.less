@@ -1,10 +1,32 @@
 // out: false
 
+@keyframes enter {
+    0% {
+        right: 0;
+        transform: translateX(100%);
+    }
+    75% {
+        right: var(--padding);
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 button {
     position: fixed;
     bottom: var(--padding);
     right: var(--padding);
+    opacity: 0;
+    transition: opacity 300ms;
     z-index: 9999;
+
+    &.open {
+        opacity: 1;
+        animation-name: enter;
+        animation-duration: 500ms;
+    }
 }
 
 .badge {

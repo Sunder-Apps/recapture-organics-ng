@@ -12,6 +12,7 @@ import { CartSheetComponent } from '../bottom-sheet/cart-sheet/cart-sheet.compon
 export class CartComponent implements OnInit {
   total: number = 0
   numItems: number = 0
+  open: boolean = false
 
   private bottomSheetRef: MatBottomSheetRef
   catalog: Item[]
@@ -37,6 +38,7 @@ export class CartComponent implements OnInit {
     this.catalog = this.shopService.catalog
     this.total = 0
     this.numItems = 0
+    this.open = false
     if (this.catalog) {
       this.catalog.forEach(item => {
         item.item_data.variations.forEach(variation => {
@@ -44,6 +46,9 @@ export class CartComponent implements OnInit {
           this.total += (variation.quantity || 0) * variation.item_variation_data.price_money.amount
         })
       })
+    }
+    if (this.numItems > 0) {
+      this.open = true
     }
   }
 }

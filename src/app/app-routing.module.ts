@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AnalysisComponent } from './analysis/analysis.component';
+import { AnalysisComponent } from '../../../sativa-indi-ng/src/app/analysis/analysis.component';
 import { AboutComponent } from './about/about.component';
 import { ShopComponent } from './shop/shop.component';
 import { LearnComponent } from './learn/learn.component';
