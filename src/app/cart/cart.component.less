@@ -3,14 +3,17 @@
 @keyframes enter {
     0% {
         right: 0;
-        transform: translateX(100%);
+        transform: matrix(0, 0, 1, 0, 100%, 0);
+    }
+    50% {
+        right: var(--padding);
+        transform: matrix(0, 0, 0, 0, -15%, 0);
     }
     75% {
-        right: var(--padding);
-        transform: translateX(-10%);
+        transform: matrix(0, 0, -1, 0, 10%, 0);
     }
     100% {
-        transform: translateX(0%);
+        transform: matrix(0, 0, 0, 0, 0%, 0);
     }
 }
 
