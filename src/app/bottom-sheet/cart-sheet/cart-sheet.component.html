@@ -1,6 +1,6 @@
 <div class="header">
     <h2>Cart</h2>
-    <i class="fas fa-times"></i>
+    <i class="fas fa-times" (click)="this.dismiss()"></i>
 </div>
 <mat-list *ngFor="let item of this.data">
     <div *ngFor="let variation of item.item_data.variations">

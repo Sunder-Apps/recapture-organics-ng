@@ -26,4 +26,8 @@ export class CartSheetComponent implements OnInit {
       }
     }
   }
+
+  dismiss () {
+    this.cartSheetRef.dismiss();
+  }
 }
