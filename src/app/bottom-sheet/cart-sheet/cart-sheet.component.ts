@@ -30,4 +30,16 @@ export class CartSheetComponent implements OnInit {
   dismiss () {
     this.cartSheetRef.dismiss();
   }
+
+  removeItem (itemID: string, variationID: string) {
+    this.shopService.removeItem(itemID, variationID)
+  }
+
+  addItem (itemID: string, variationID: string) {
+    this.shopService.addItem(itemID, variationID)
+  }
+
+  clearItem (itemID: string, variationID: string) {
+    this.shopService.clearItem(itemID, variationID)
+  }
 }

@@ -29,11 +29,38 @@ export class ShopService {
   setQuantity (itemID: string, variationID: string, quantity: number) {
     if (quantity > -1 && quantity < 100) {
       if (this.catalog) {
-        let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID);
+        let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID)
         if (variation) {
           variation.quantity = quantity
           this.subCatalog.next(this.catalog)
         }
+      }
+    }
+  }
+
+  removeItem (itemID: string, variationID: string) {
+    if (this.catalog) {
+      let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID)
+      if (variation) {
+        this.setQuantity(itemID, variationID, variation.quantity - 1)
+      }
+    }
+  }
+
+  addItem (itemID: string, variationID: string) {
+    if (this.catalog) {
+      let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID)
+      if (variation) {
+        this.setQuantity(itemID, variationID, variation.quantity + 1)
+      }
+    }
+  }
+
+  clearItem (itemID: string, variationID: string) {
+    if (this.catalog) {
+      let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID)
+      if (variation) {
+        this.setQuantity(itemID, variationID, 0)
       }
     }
   }
