@@ -11,8 +11,9 @@ import { CartSheetComponent } from '../bottom-sheet/cart-sheet/cart-sheet.compon
 })
 export class CartComponent implements OnInit {
   total: number = 0
-  numItems: number = 0
+  numItems: number = 1
   open: boolean = false
+  changed: boolean = false
 
   private bottomSheetRef: MatBottomSheetRef
   catalog: Item[]
@@ -49,6 +50,8 @@ export class CartComponent implements OnInit {
     }
     if (this.numItems > 0) {
       this.open = true
+      this.changed = false;
+      this.changed = true;
     }
   }
 }
