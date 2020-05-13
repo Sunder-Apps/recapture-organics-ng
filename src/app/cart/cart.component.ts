@@ -54,6 +54,12 @@ export class CartComponent implements OnInit {
       setTimeout(()=>{ 
         this.changed = false;
        }, 1000)
+    } else {
+      this.open = false
+      this.changed = false;
+      if (this.bottomSheetRef) {
+        this.bottomSheetRef.dismiss()
+      }
     }
   }
 }
