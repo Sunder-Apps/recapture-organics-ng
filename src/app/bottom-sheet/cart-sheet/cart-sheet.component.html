@@ -6,8 +6,9 @@
     <div *ngFor="let variation of item.item_data.variations">
         <mat-list-item *ngIf="!item.is_deleted && variation.quantity > 0">
             <span mat-line>
+                <p>{{ variation.item_variation_data.name }}</p>
                 <mat-form-field>
-                    <mat-label>{{ variation.item_variation_data.name }}:</mat-label>
+                    <mat-label>Quantity:</mat-label>
                     <input matInput type="number" min="0" max="100" [(ngModel)]="variation.quantity" (input)="this.updateCart(item.id, variation.id, $event)" />
                 </mat-form-field>
                 <button><i class="fas fa-times"></i></button>
