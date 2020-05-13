@@ -1,12 +1,17 @@
-<h2>Cart</h2>
+<div class="header">
+    <h2>Cart</h2>
+    <i class="fas fa-times"></i>
+</div>
 <mat-list *ngFor="let item of this.data">
-    <mat-list-item *ngFor="let variation of item.item_data.variations">
-        <span mat-line>
-            <mat-form-field>
-                <mat-label>{{ variation.item_variation_data.name }}:</mat-label>
-                <input matInput type="number" min="0" max="100" [(ngModel)]="variation.quantity" (input)="this.updateCart(item.id, variation.id, $event)" />
-            </mat-form-field>
-            <button><i class="fas fa-times"></i></button>
-        </span>
-    </mat-list-item>
+    <ng-template *ngFor="let variation of item.item_data.variations">
+        <mat-list-item *ngIf="!item.is_deleted && variation.quantity > 0">
+            <span mat-line>
+                <mat-form-field>
+                    <mat-label>{{ variation.item_variation_data.name }}:</mat-label>
+                    <input matInput type="number" min="0" max="100" [(ngModel)]="variation.quantity" (input)="this.updateCart(item.id, variation.id, $event)" />
+                </mat-form-field>
+                <button><i class="fas fa-times"></i></button>
+            </span>
+        </mat-list-item>
+    </ng-template>
 </mat-list>
