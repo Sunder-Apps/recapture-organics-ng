@@ -24,6 +24,7 @@ export class ShopService {
       })
       this.subCatalog.next(this.catalog)
     })
+    console.log(this.catalog);
   }
 
   setQuantity (itemID: string, variationID: string, quantity: number) {
