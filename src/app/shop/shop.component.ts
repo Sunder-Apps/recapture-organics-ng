@@ -13,7 +13,7 @@ export class ShopComponent implements OnInit {
   constructor(
     private shopService: ShopService
   ) {
-    this.shopService.obsCatalog.subscribe(catalog => this.catalog = catalog)
+    this.shopService.obsCatalog.subscribe(catalog => {this.catalog = catalog;console.log(catalog)})
   }
 
   ngOnInit() {
