@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'analysis/promo/live-oil-full-spectrum-2019',
     pathMatch: 'full',
-    redirectTo: 'shop/:item',
+    redirectTo: 'shop#2W2XFIOEHQGGPQOB325ZASO5',
     data: {
       animation: 'promo'
     }
@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'analysis/promo/thc-free-broad-spectrum-2019',
     pathMatch: 'full',
-    redirectTo: 'shop/:item',
+    redirectTo: 'shop#HU7UJ2AH5AHCSP4TBMYXFIMT',
     data: {
       animation: 'promo'
     }
@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: 'analysis/promo/pain-salve-1-2019',
     pathMatch: 'full',
-    redirectTo: 'shop/:item',
+    redirectTo: 'shop#NBBQH7WW5B6FDDAV3CLGFOWZ', // full spectrum?
     data: {
       animation: 'promo'
     }
@@ -35,7 +35,7 @@ const routes: Routes = [
   {
     path: 'analysis/promo/pain-salve-2-2019',
     pathMatch: 'full',
-    redirectTo: 'shop/:item',
+    redirectTo: 'shop#CXMRVQ4RJKODYKCR3X6KE5DF',
     data: {
       animation: 'promo'
     }
