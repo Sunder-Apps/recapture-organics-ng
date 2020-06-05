@@ -1,5 +1,19 @@
 // out: false
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 img {
     position: relative;
     width: 100%;
+    min-width: 300px;
+}
+
+@media (min-width: 600px) {
+    img {
+        width: 33%;
+    }
 }
