@@ -19,12 +19,9 @@ export class ShopService {
 
   updateCatalog () {
     this.httpClient.get<any>(this.getItemsUrl).subscribe(data => {
-      this.catalog = data.objects.filter((item: Item) => {
-        return item.present_at_location_ids.includes(this.locationID)
-      })
-      this.subCatalog.next(this.catalog)
+      this.subCatalog.next(data.objects)
     })
-    console.log(this.catalog);
+    console.log(this.catalog)
   }
 
   setQuantity (itemID: string, variationID: string, quantity: number) {
