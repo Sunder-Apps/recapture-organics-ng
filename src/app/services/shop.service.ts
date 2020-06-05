@@ -7,7 +7,7 @@ import { Item } from '../objects/item';
   providedIn: 'root'
 })
 export class ShopService {
-  private getItemsUrl: string = 'https://sunder-functions20190319082035.azurewebsites.net/api/ROGetItems?code=HY2haXS0ndupb2u3dZEtkHaQ3QYONMLtgLH/2vW3Vd3vYMv4lwcdMg=='
+  private getItemsUrl: string = 'recapture-organics-fn.azurewebsites.net/api/GetItems?code=xLQm9Q/wzwDMIGs2gaIQVga4xf0djqUDImLxKaUEDwpanDmj1hU3JQ=='
   private locationID: string = 'R7GBGZNS5QYQV'
   public catalog: Item[]
   private subCatalog: Subject<Item[]> = new Subject<Item[]>()

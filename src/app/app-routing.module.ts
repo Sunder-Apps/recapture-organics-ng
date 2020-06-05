@@ -55,6 +55,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'shop/:id',
+    component: ShopComponent,
+    data: {
+      animation : 'shop'
+    }
+  },
+  {
     path: 'learn',
     component: LearnComponent,
     data: {
