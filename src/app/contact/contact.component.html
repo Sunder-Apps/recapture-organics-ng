@@ -1,0 +1,22 @@
+<div class="contact section vp-fade-in">
+    <h4>Contact Us</h4>
+    <p>Contact us for information, inqueries, or bulk orders.</p>
+    <form>
+        <mat-form-field appearance="standard">
+            <i class="fas fa-user" matPrefix></i>
+            <mat-label>Name:</mat-label>
+            <input name="name" matInput [(ngModel)]="this.contact.name" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <i class="far fa-envelope" matPrefix></i>
+            <mat-label>Email:</mat-label>
+            <input name="email" matInput [(ngModel)]="this.contact.email" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <i class="far fa-sticky-note" matPrefix></i>
+            <mat-label>Message:</mat-label>
+            <textarea name="message" matInput [(ngModel)]="this.contact.message"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="this.send()">SEND</button>
+    </form>
+</div>

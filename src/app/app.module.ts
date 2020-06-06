@@ -23,7 +23,9 @@ import { ShopService } from './services/shop.service'
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.component';
-import { LearnComponent } from './learn/learn.component'
+import { LearnComponent } from './learn/learn.component';
+import { ContactComponent } from './contact/contact.component';
+import { SubscribeComponent } from './subscribe/subscribe.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { LearnComponent } from './learn/learn.component'
     ShopComponent,
     CartComponent,
     CartSheetComponent,
-    LearnComponent
+    LearnComponent,
+    ContactComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,
