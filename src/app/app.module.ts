@@ -25,7 +25,8 @@ import { CartComponent } from './cart/cart.component';
 import { CartSheetComponent } from './bottom-sheet/cart-sheet/cart-sheet.component';
 import { LearnComponent } from './learn/learn.component';
 import { ContactComponent } from './contact/contact.component';
-import { SubscribeComponent } from './subscribe/subscribe.component'
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { TestComponent } from './test/test.component'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component'
     CartSheetComponent,
     LearnComponent,
     ContactComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

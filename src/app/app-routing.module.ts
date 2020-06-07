@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutComponent } from './about/about.component';
 import { ShopComponent } from './shop/shop.component';
 import { LearnComponent } from './learn/learn.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {
@@ -73,6 +74,13 @@ const routes: Routes = [
     component: AboutComponent,
     data: {
       animation: 'about'
+    }
+  },
+  {
+    path: 'test',
+    component: TestComponent,
+    data: {
+      animation: 'test'
     }
   },
   {
