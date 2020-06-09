@@ -6,8 +6,8 @@ if [ "$1" = "--apps" ]; then
     mkdir ../recapture-organics-cv/www
     cp -r ./docs/* ../recapture-organics-cv/www
     cd ../recapture-organics-cv
-    cordova build --release ios
-    cordova build --release android
+    cordova build --prod ios
+    cordova build --prod android
     cd ../recapture-organics-ng
 fi
 

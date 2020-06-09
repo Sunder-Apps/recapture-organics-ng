@@ -12,7 +12,7 @@
     <div class="catalog" *ngIf="this.catalog; else loading">
         <div class="wrapper" *ngFor="let item of this.catalog">
             <div class="item" *ngIf="!item.is_deleted">
-                <div class="section vp-fade-in" *ngFor="let variation of item.item_data.variations">
+                <div class="section " *ngFor="let variation of item.item_data.variations">
                     <div [id]="variation.id" class="text">
                         <h5>{{ item.item_data.name }}</h5>
                         <h4>{{ variation.item_variation_data.name }}</h4>
