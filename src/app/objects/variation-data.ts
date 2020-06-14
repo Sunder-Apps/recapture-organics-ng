@@ -7,6 +7,8 @@ export class VariationData {
         public ordinal: number,
         public price_money: PriceMoney,
         public pricing_type: string,
-        public sku: string
+        public sku: string,
+        public images?: string[],
+        public description?: string
     ) { }
 }
