@@ -24,7 +24,8 @@ export class ShopService {
   }
 
   setQuantity (itemID: string, variationID: string, quantity: number) {
-    if (quantity > -1 && quantity < 100) {
+    console.log('setQuantity', itemID, variationID);
+    if (quantity >= 0 && quantity < 100) {
       if (this.catalog) {
         let variation = this.catalog.find(item => item.id == itemID).item_data.variations.find(variation => variation.id == variationID)
         if (variation) {

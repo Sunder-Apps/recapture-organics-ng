@@ -24,6 +24,7 @@ export class ShopComponent implements OnInit {
   }
 
   addToCart (itemID: string, variationID: string) {
+    console.log('addToCart', itemID, variationID)
     this.shopService.setQuantity(itemID, variationID, 1)
   }
 

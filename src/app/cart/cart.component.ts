@@ -36,6 +36,7 @@ export class CartComponent implements OnInit {
   }
 
   updateCart () {
+    console.log('updateCart')
     this.catalog = this.shopService.catalog
     this.total = 0
     this.numItems = 0
