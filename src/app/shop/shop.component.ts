@@ -24,7 +24,6 @@ export class ShopComponent implements OnInit {
   }
 
   addToCart (itemID: string, variationID: string) {
-    alert('hi')
     this.shopService.setQuantity(itemID, variationID, 1)
   }
 
