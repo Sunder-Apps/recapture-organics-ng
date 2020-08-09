@@ -10,7 +10,6 @@ import { NotFoundComponent } from './not-found/not-found.component'
 import { AlertsComponent } from './alerts/alerts.component'
 import { DefaultDialogComponent } from './alerts/default-dialog/default-dialog.component'
 import { FooterComponent } from './footer/footer.component'
-import { CryptoService } from './services/crypto.service'
 import { SettingsService } from './services/settings.service'
 import { StorageService } from './storage/storage.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -66,7 +65,6 @@ import { TestComponent } from './test/test.component'
     HttpClientModule
   ],
   providers: [
-    CryptoService,
     SettingsService,
     StorageService,
     ShopService

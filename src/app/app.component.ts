@@ -2,7 +2,6 @@ import { Component, HostListener } from '@angular/core';
 import { Theme } from './objects/settings';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { SettingsService } from './services/settings.service';
-import { CryptoService } from './services/crypto.service';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators'
 import { RouterAnimations } from './anime/anime';
@@ -28,16 +27,15 @@ export class AppComponent {
                  .subscribe(() => this.onScrollEvent())
 
   constructor (
-    private router:Router, 
+    private router:Router,
     private settingsService:SettingsService,
-    //private cryptoService:CryptoService,
     private shopService:ShopService
     ) {
     this.settingsService.settings.subscribe(settings => {
       if (settings) {
           this.theme = settings.theme
           this.snap = !settings.animations
-      } 
+      }
     })
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
